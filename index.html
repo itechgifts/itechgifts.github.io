@@ -2,314 +2,246 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free iPhone Giveaways</title>
   <style>
     body {
-      font-family: "Arial", sans-serif; /* Change font to sans-serif */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
-    
-    .vertical-container {
-      position: relative;
-      width: 100%;
-      height: 30px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
       background-color: #3569F0;
-      border-radius: 0.2rem;
-      margin: 0 auto;
-      margin-left: 0.5%;
-      margin-right: 10%;
-      margin-top: -0.3rem;
-      padding-top: 0.4rem;
+      color: #ffffff;
     }
-    
-    .icon {
-      position: absolute;
-      left: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 20px;
-      height: auto;
+
+    .header .logo {
+      display: flex;
+      align-items: center;
     }
-    
-    .text {
-      position: absolute;
-      left: 40%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
+
+    .header img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .header .text {
       font-weight: bold;
-      font-family: sans-serif;
-      font-size: 14px;
+      font-size: 1.1rem;
     }
-    
-    .button {
-      position: absolute;
-      right: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 3px 4px;
-      background-color: #fff;
+
+    .header .button {
+      padding: 5px 10px;
+      background-color: #ffffff;
       color: #3569F0;
       border: none;
-      border-radius: 0.5rem;
+      border-radius: 0.3rem;
       cursor: pointer;
-      font-size: 13px;
-    }    
-    
-    .gap {
-      margin-top: 1.5rem;
     }
-    
-    .image-container {
+
+    .image-container, .text-container {
       text-align: center;
-    }
-    
-    .image {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
+      padding: 20px 10%;
     }
 
-    .button-claim {
-      display: block;
-      margin: 0 auto;
-      padding: 10px 16px; /* Reduced padding */
-      background-color: #3569F0;
-      color: white;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 2.0rem; /* Reduced font size */
-      font-weight: bold;
-      margin-right: 20px;
-      margin-left: 20px;
-      animation: zoomInOut 1s infinite alternate;
-    }
-    
-    .headline2-container {
-      text-align: center;
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
-    .headline2 {
-      font-size: 2.5rem; /* Increased font size */
-      margin-top: 0.2rem; /* Reduced gap */
-      display: inline-block;
-    }
-    
-    .headline3-container {
-      text-align: center;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 1.5rem;
-    }
-
-    .headline3 {
-      font-size: 2.0rem;
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    .ultra-speed {
-      font-size: 2.0rem;
-    }
-
-    .additional-info {
-      font-size: 1.45rem;
-      font-weight: bold;
-      margin-top: 1rem;
-      text-align: center;
-      padding: 0 20px;
-    }
-
-    .claim-container {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-      background-color: #FFFFFF;
-      padding: 20px;
-      border-radius: 10px;
-      z-index: 999;
-      max-height: 90%;
-      overflow-y: auto;
-    }
-    .claim-content {
-     margin-bottom: 20px;
-     text-align: center; /* Center align all content */
-    }
-
-    .claim-content > div {
-      margin-left: 30px; /* Add left margin */
-      margin-right: 30px; /* Add right margin */
+    .text-container h2 {
+      font-size: 1.8rem;
+      margin: 10px 0;
     }
 
     .claim-button {
       display: inline-block;
-      padding: 10px 40px; /* Reduced padding */
+      padding: 12px 20px;
       background-color: #3569F0;
-      color: white;
-      border-radius: 8px;
+      color: #ffffff;
+      border-radius: 20px;
       text-decoration: none;
-      font-size: 1.5rem; /* Reduced font size */
+      font-size: 1.2rem;
       font-weight: bold;
-      margin-bottom: 5px;
+      margin: 20px 0;
+      animation: zoomInOut 1s infinite alternate;
     }
 
-    .faq-container {
-      margin-top: 5rem;
-    }
-
-    .faq-question {
-      font-size: 1.3rem;
+    .info-container {
+      text-align: center;
+      margin: 20px auto;
+      padding: 20px;
+      font-size: 1.1rem;
       font-weight: bold;
-      cursor: pointer;
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      width: 80%;
     }
 
-    .faq-answer {
-      font-size: 1.3rem;
+    .claim-modal, .overlay {
       display: none;
-    }
-
-    .overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 998;
+      z-index: 999;
     }
 
-    .close-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .claim-modal {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      max-height: 90%;
+      overflow-y: auto;
+      width: 80%;
+    }
+
+    .claim-modal .close-button {
       cursor: pointer;
-      color: #555;
+      background: #eee;
+      border: none;
+      padding: 5px;
+      border-radius: 5px;
+      float: right;
+    }
+
+    .claim-modal h2, .faq-container h2 {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .claim-options div {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .claim-options img {
+      width: 100px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .claim-options p {
+      font-size: 1.1rem;
+    }
+
+    .claim-options a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3569F0;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .faq-container {
+      padding: 20px 10%;
+      margin: 30px 0;
+    }
+
+    .faq-question {
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+
+    .faq-answer {
+      font-size: 1.1rem;
+      display: none;
+      margin-bottom: 20px;
     }
 
     @keyframes zoomInOut {
-      0% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1.05);
-      }
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
     }
   </style>
 </head>
 <body>
-  <div class="vertical-container">
-    <img src="icon.png" alt="Icon" class="icon">
-    <div class="text">Exclusive iPhone Giveaways</div>
+  <!-- Header Section -->
+  <div class="header">
+    <div class="logo">
+      <img src="icon.png" alt="Logo">
+      <span class="text">Exclusive iPhone Giveaways</span>
+    </div>
     <button class="button" id="toggleClaimButton">Claim iPhone</button>
   </div>
 
-  <div class="gap"></div>
-
-  <div class="image-container" style="text-align: center;">
-    <img src="iphone_image.jpg" alt="iPhone Giveaway Image" class="image">
-  </div>
-
-  <div class="gap"></div>
-
-  <div class="headline2-container">
-    <h2 class="headline2" style="font-size: 1.8rem;">Stand a Chance to win a Brand New Free iPhone</h2><!-- Smaller font size -->
-  </div>
-
+  <!-- Image Section -->
   <div class="image-container">
-    <a href="#" class="button-claim" id="claimNowButton">Claim Now</a>
+    <img src="iphone_image.jpg" alt="iPhone Giveaway">
   </div>
 
-  <div class="gap" style="margin-top: 3rem;"></div>
-
-  <div class="headline3-container" style="margin-top: 2rem;">
-
-  <div class="gap" style="margin-top: 1rem;"></div>
-
-  <div class="ultra-speed">
-    <p></p>
+  <!-- Text Section -->
+  <div class="text-container">
+    <h2>Stand a Chance to Win a Brand New Free iPhone</h2>
+    <a href="#" class="claim-button" id="claimNowButton">Claim Now</a>
   </div>
 
-  <div class="additional-info">
-    <p>Ultra 5G Network Speed With A15 Bionic Chip on The iPhone 14 and A16 Bionic Chip on The iPhone 14 Pro and The iPhone 14 Pro Max, The Fastest Chip in any Smartphone, Amazing Camera's, Super Retina XDR OLED Display, The Highest Brightness in a Phone with the Beautiful Dynamic Island</p>
+  <!-- Additional Info Section -->
+  <div class="info-container">
+    Ultra 5G Network Speed with A15 Bionic Chip on The iPhone 14, and A16 Bionic Chip on The iPhone 14 Pro and iPhone 14 Pro Max, the Fastest Chip in any Smartphone, Amazing Cameras, Super Retina XDR OLED Display, and the Beautiful Dynamic Island.
   </div>
 
-  <div class="overlay" id="overlay" style="display: none;"></div>
-  <div class="claim-container" id="claimContainer" style="display: none;">
-    <div class="claim-content">
-      <span class="close-button" id="closeButton">Close</span>
-      <h2>Choose the iPhone you want</h2>
-      <hr>
+  <!-- Claim Modal and Overlay -->
+  <div class="overlay" id="overlay"></div>
+  <div class="claim-modal" id="claimModal">
+    <button class="close-button" id="closeButton">Close</button>
+    <h2>Choose the iPhone You Want</h2>
+    <div class="claim-options">
       <div>
-        <h2>iPhone 14 Plus</h2>
-        <img src="iphone_14plus_image.jpg" alt="iPhone 14 Plus Image" class="image">
-        <p>Blue, 6.7-inch Display Size, 512GB Storage Space</p>
-        <a href="https://uploadmix.net/Winiphone14plusnow" class="claim-button">Claim iPhone</a> <!-- Updated href -->
+        <h3>iPhone 14 Plus</h3>
+        <img src="iphone_14plus_image.jpg" alt="iPhone 14 Plus">
+        <p>Blue, 6.7-inch Display, 512GB Storage</p>
+        <a href="https://uploadmix.net/Winiphone14plusnow">Claim iPhone</a>
       </div>
-      <hr style="margin-bottom: 3px;">
       <div>
-        <h2>iPhone 14 Pro</h2>
-        <img src="iphone_14pro_image.jpg" alt="iPhone 14 Pro Image" class="image">
-        <p>Deep Purple, 6.7-inch Display Size, 512GB Storage Space</p>
-        <a href="https://trkfiles.com/Winiphone14pronow" class="claim-button">Claim iPhone</a> <!-- Updated href -->
+        <h3>iPhone 14 Pro</h3>
+        <img src="iphone_14pro_image.jpg" alt="iPhone 14 Pro">
+        <p>Deep Purple, 6.7-inch Display, 512GB Storage</p>
+        <a href="https://trkfiles.com/Winiphone14pronow">Claim iPhone</a>
       </div>
-      <hr style="margin-bottom: 3px;">
       <div>
-        <h2>iPhone 14 Pro Max</h2>
-        <img src="iphone_14promax_image.jpg" alt="iPhone 14 Pro Max Image" class="image">
-        <p>Space Black, 6.7-inch Display Size, 1TB Storage Space</p>
-        <a href="https://passingfiles.com/Winiphone14promaxnow" class="claim-button">Claim iPhone</a> <!-- Updated href -->
+        <h3>iPhone 14 Pro Max</h3>
+        <img src="iphone_14promax_image.jpg" alt="iPhone 14 Pro Max">
+        <p>Space Black, 6.7-inch Display, 1TB Storage</p>
+        <a href="https://passingfiles.com/Winiphone14promaxnow">Claim iPhone</a>
       </div>
-      <hr style="margin-bottom: 3px;">
-      <div>
+    </div>
+  </div>
 
-      <div class="faq-container">
-        <h2>Frequently Asked Questions</h2>
-        <hr>
-        <div>
-          <h2 class="faq-question">When will I get my iPhone?</h2>
-          <p class="faq-answer">You'll Receive your iPhone Within 5-10 business days after Successful Claiming and Participation on Giveaways.</p>
-        </div>
-        <hr>
-        <div>
-          <h2 class="faq-question">How long will it take for my iPhone to be Shipped?</h2>
-          <p class="faq-answer">Typically it takes 5-7 Business days After Successful Completion of the Giveaway processes.</p>
-        </div>
-        <hr>
-        <div>
-          <h2 class="faq-question">Why do I have to unlock or complete offer's to open the official page?</h2>
-          <p class="faq-answer">Our Offer or Verification methods is different from the ones you see on other Giveaway Sites, we use it to make sure that there are no multiple or duplicate attempts to claim our iPhones. we also place it to prevent malicious or robots activities on our website. we also place it so that we can Create a Specific profile link for each of our winners, so that our participants can be uniquely selected to win</p>
-        </div>
-        <hr>
-        <div>
-          <h2 class="faq-question">How will I select the Colour of the iPhone I want?</h2>
-          <p class="faq-answer">You'll be able to Fully Select the Colour of the iPhone you want and also Fill in your Shipping Address for us to Start Shippi your iPhone, after you've successfully Completed an Offer and Unlock our Official Page.</p>
-        </div>
-        <hr>
-        <div>
-          <h2 class="faq-question">Do I have to pay for shipping fee for me to get my iPhone?</h2>
-          <p class="faq-answer">We do not Charge for any Shipping Fee, We'll Ship your iPhone freely worldwide.</p>
-        </div>
-      </div>
+  <!-- FAQ Section -->
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      <p class="faq-question">When will I get my iPhone?</p>
+      <p class="faq-answer">You'll receive your iPhone within 5-10 business days after successful claiming and participation.</p>
+    </div>
+    <div>
+      <p class="faq-question">Do I have to pay for shipping?</p>
+      <p class="faq-answer">No, shipping is free worldwide.</p>
     </div>
   </div>
 
   <script>
     document.getElementById('claimNowButton').addEventListener('click', function() {
-      document.getElementById('claimContainer').style.display = 'block';
+      document.getElementById('claimModal').style.display = 'block';
       document.getElementById('overlay').style.display = 'block';
     });
 
     document.getElementById('closeButton').addEventListener('click', function() {
-      document.getElementById('claimContainer').style.display = 'none';
+      document.getElementById('claimModal').style.display = 'none';
       document.getElementById('overlay').style.display = 'none';
     });
 
@@ -320,335 +252,6 @@
         answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
       });
     });
-
-    document.getElementById('toggleClaimButton').addEventListener('click', function() {
-      document.getElementById('claimContainer').style.display = document.getElementById('claimContainer').style.display === 'block' ? 'none' : 'block';
-      document.getElementById('overlay').style.display = document.getElementById('overlay').style.display === 'block' ? 'none' : 'block';
-    });
   </script>
 </body>
 </html>
-
--scale=1.0">
-  <title>Free iPhone Giveaways</title>
-  <style>
-    body {
-      font-family: "Arial", sans-serif; /* Change font to sans-serif */
-    }
-    
-    .vertical-container {
-      position: relative;
-      width: 100%;
-      height: 30px;
-      background-color: #3569F0;
-      border-radius: 0.2rem;
-      margin: 0 auto;
-      margin-left: 0.5%;
-      margin-right: 10%;
-      margin-top: -0.3rem;
-      padding-top: 0.4rem;
-    }
-    
-    .icon {
-      position: absolute;
-      left: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 20px;
-      height: auto;
-    }
-    
-    .text {
-      position: absolute;
-      left: 40%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-weight: bold;
-      font-family: sans-serif;
-      font-size: 14px;
-    }
-    
-    .button {
-      position: absolute;
-      right: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 3px 4px;
-      background-color: #fff;
-      color: #3569F0;
-      border: none;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      font-size: 13px;
-    }    
-    
-    .gap {
-      margin-top: 1.5rem;
-    }
-    
-    .image-container {
-      text-align: center;
-    }
-    
-    .image {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .button-claim {
-      display: block;
-      margin: 0 auto;
-      padding: 10px 16px; /* Reduced padding */
-      background-color: #3569F0;
-      color: white;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 2.0rem; /* Reduced font size */
-      font-weight: bold;
-      margin-right: 20px;
-      margin-left: 20px;
-      animation: zoomInOut 1s infinite alternate;
-    }
-    
-    .headline2-container {
-      text-align: center;
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
-    .headline2 {
-      font-size: 2.5rem; /* Increased font size */
-      margin-top: 0.2rem; /* Reduced gap */
-      display: inline-block;
-    }
-    
-    .headline3-container {
-      text-align: center;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 1.5rem;
-    }
-
-    .headline3 {
-      font-size: 2.0rem;
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    .ultra-speed {
-      font-size: 2.0rem;
-    }
-
-    .additional-info {
-      font-size: 1.45rem;
-      font-weight: bold;
-      margin-top: 1rem;
-      text-align: center;
-      padding: 0 20px;
-    }
-
-    .claim-container {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-      background-color: #FFFFFF;
-      padding: 20px;
-      border-radius: 10px;
-      z-index: 999;
-      max-height: 90%;
-      overflow-y: auto;
-    }
-    .claim-content {
-     margin-bottom: 20px;
-     text-align: center; /* Center align all content */
-    }
-
-    .claim-content > div {
-      margin-left: 30px; /* Add left margin */
-      margin-right: 30px; /* Add right margin */
-    }
-
-    .claim-button {
-      display: inline-block;
-      padding: 10px 40px; /* Reduced padding */
-      background-color: #3569F0;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.5rem; /* Reduced font size */
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .faq-container {
-      margin-top: 5rem;
-    }
-
-    .faq-question {
-      font-size: 1.3rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .faq-answer {
-      font-size: 1.3rem;
-      display: none;
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 998;
-    }
-
-    .close-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-      color: #555;
-    }
-
-    @keyframes zoomInOut {
-      0% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1.05);
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="vertical-container">
-    <img src="icon.png" alt="Icon" class="icon">
-    <div class="text">Exclusive iPhone Giveaways</div>
-    <button class="button" id="toggleClaimButton">Claim iPhone</button>
-  </div>
-
-  <div class="gap"></div>
-
-  <div class="image-container" style="text-align: center;">
-    <img src="iphone_image.jpg" alt="iPhone Giveaway Image" class="image">
-  </div>
-
-  <div class="gap"></div>
-
-  <div class="headline2-container">
-    <h2 class="headline2" style="font-size: 1.8rem;">Stand a Chance to win a Brand New Free iPhone</h2><!-- Smaller font size -->
-  </div>
-
-  <div class="image-container">
-    <a href="#" class="button-claim" id="claimNowButton">Claim Now</a>
-  </div>
-
-  <div class="gap" style="margin-top: 3rem;"></div>
-
-  <div class="headline3-container" style="margin-top: 2rem;">
-
-  <div class="gap" style="margin-top: 1rem;"></div>
-
-  <div class="ultra-speed">
-    <p></p>
-  </div>
-
-  <div class="additional-info">
-    <p>Ultra 5G Network Speed With A15 Bionic Chip on The iPhone 14 and A16 Bionic Chip on The iPhone 14 Pro and The iPhone 14 Pro Max, The Fastest Chip in any Smartphone, Amazing Camera's, Super Retina XDR OLED Display, The Highest Brightness in a Phone with the Beautiful Dynamic Island</p>
-  </div>
-
-  <div class="overlay" id="overlay" style="display: none;"></div>
-  <div class="claim-container" id="claimContainer" style="display: none;">
-    <div class="claim-content">
-      <span class="close-button" id="closeButton">Close</span>
-      <h2>Choose the iPhone you want</h2>
-      <hr>
-      <div>
-        <h2>iPhone 14 Plus</h2>
-        <img src="iphone_14plus_image.jpg" alt="iPhone 14 Plus Image" class="image">
-        <p>Blue, 6.7-inch Display Size, 512GB Storage Space</p>
-        <a href="https://uplvlrwrds.com/cl/msKGrrnr6hMT" class="claim-button">Claim iPhone</a> <!-- Updated href -->
-      </div>
-      <hr style="margin-bottom: 3px;">
-      <div>
-        <h2>iPhone 14 Pro</h2>
-        <img src="iphone_14pro_image.jpg" alt="iPhone 14 Pro Image" class="image">
-        <p>Deep Purple, 6.7-inch Display Size, 512GB Storage Space</p>
-        <a href="https://uplvlrwrds.com/cl/9qickWoUyDLT" class="claim-button">Claim iPhone</a> <!-- Updated href -->
-      </div>
-      <hr style="margin-bottom: 3px;">
-      <div>
-        <h2>iPhone 14 Pro Max</h2>
-        <img src="iphone_14promax_image.jpg" alt="iPhone 14 Pro Max Image" class="image">
-        <p>Space Black, 6.7-inch Display Size, 1TB Storage Space</p>
-        <a href="https://uplvlrwrds.com/cl/9dcprZMirxhn" class="claim-button">Claim iPhone</a> <!-- Updated href -->
-      </div>
-      <hr style="margin-bottom: 3px;">
-      <div>
-
-      <div class="faq-container">
-        <h2>Frequently Asked Questions</h2>
-        <hr>
-        <div>
-          <h2 class="faq-question">When will I get my iPhone?</h2>
-          <p class="faq-answer">You'll receive your iPhone within 7-14 business days after successful claiming and participation on giveaways.</p>
-        </div>
-        <hr>
-        <div>
-          <h2 class="faq-question">How long will it take for my iPhone to be Shipped?</h2>
-          <p class="faq-answer">Typically it takes 7-14 Business days after successful completion of the giveaway processes.</p>
-        </div>
-        <hr>
-        <div>
-          <h2 class="faq-question">Why do I have to unlock or complete offer's to open the official page?</h2>
-          <p class="faq-answer">Our offer or verification methods is different from the ones you see on other Giveaway sites, we use it to make sure that there are no multiple or duplicate attempts to claim our iPhones. we also place it to prevent malicious or robots activities on our website. we also place it so that we can create a specific profile link for each of our winners, so that our participants can be uniquely selected to win</p>
-        </div>
-        <hr>
-        <div>
-          <h2 class="faq-question">How will I select the Colour of the iPhone I want?</h2>
-          <p class="faq-answer">You'll be able to fully Select the colour of the iPhone you want and also fill in your shipping Address for us to Start Shipping your iPhone, after you've successfully completed an offer and unlock our official Page.</p>
-        </div>
-        <hr>
-        <div>
-          <h2 class="faq-question">Do I have to pay for shipping fee for me to get my iPhone?</h2>
-          <p class="faq-answer">We do not Charge for any Shipping fee, We'll ship your iPhone freely worldwide.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    document.getElementById('claimNowButton').addEventListener('click', function() {
-      document.getElementById('claimContainer').style.display = 'block';
-      document.getElementById('overlay').style.display = 'block';
-    });
-
-    document.getElementById('closeButton').addEventListener('click', function() {
-      document.getElementById('claimContainer').style.display = 'none';
-      document.getElementById('overlay').style.display = 'none';
-    });
-
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(question => {
-      question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-
-    document.getElementById('toggleClaimButton').addEventListener('click', function() {
-      document.getElementById('claimContainer').style.display = document.getElementById('claimContainer').style.display === 'block' ? 'none' : 'block';
-      document.getElementById('overlay').style.display = document.getElementById('overlay').style.display === 'block' ? 'none' : 'block';
-    });
-  </script>
-</body>
-</html>
-
