@@ -38,7 +38,7 @@
     }
 
     .header .button {
-      padding: 5px 10px;
+      padding: 5px 5px;
       background-color: #ffffff;
       color: #3569F0;
       border: none;
@@ -50,33 +50,38 @@
       text-align: center;
       padding: 10px 10%; /* Reduced padding */
     }
-
+    .image-container img {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px; /* Limit maximum height */
+  object-fit: contain; /* Fit within the container */
+    }
     .text-container h1 {
       font-size: 2rem;
-      margin: 5px 0; /* Reduced margin for h1 */
+      margin: 20px 0; /* Reduced margin for h1 */
     }
 
     .text-container h2 {
       font-size: 1.8rem;
-      margin: 15px 0; /* Reduced margin for h2 */
+      margin: 30px 0; /* Reduced margin for h2 */
     }
 
     .claim-button {
       display: inline-block;
-      padding: 10px 50px;
+      padding: 10px 60px;
       background-color: #3569F0;
       color: #ffffff;
       border-radius: 20px;
       text-decoration: none;
       font-size: 2.0rem;
       font-weight: bold;
-      margin: 20px 0;
+      margin: 0px 0;
       animation: zoomInOut 1s infinite alternate;
     }
 
     .info-container {
       text-align: center;
-      margin: 20px auto;
+      margin: 60px auto;
       padding: 20px;
       font-size: 1.5rem;
       font-weight: bold;
