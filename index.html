@@ -46,14 +46,20 @@
       cursor: pointer;
     }
 
-.image-container, .text-container {
-  text-align: center;
-  padding: 10px 10%; /* Reduced padding to 10px */
-}
+    .image-container, .text-container {
+      text-align: center;
+      padding: 10px 10%; /* Reduced padding */
+    }
 
-.text-container h2 {
-  font-size: 1.8rem;
-  margin: 5px 0; /* Reduced margin to 5px */
+    .text-container h1 {
+      font-size: 2rem;
+      margin: 5px 0; /* Reduced margin for h1 */
+    }
+
+    .text-container h2 {
+      font-size: 1.8rem;
+      margin: 5px 0; /* Reduced margin for h2 */
+    }
 
     .claim-button {
       display: inline-block;
@@ -68,16 +74,16 @@
       animation: zoomInOut 1s infinite alternate;
     }
 
-.info-container {
-  text-align: center;
-  margin: 20px auto;
-  padding: 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  width: 80%; /* Change width to 100% */
-  max-width: 800px; /* Optional: Add a max-width for better layout on large screens */
+    .info-container {
+      text-align: center;
+      margin: 20px auto;
+      padding: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      width: 80%;
+      max-width: 800px;
     }
 
     .claim-modal, .overlay {
@@ -106,21 +112,20 @@
       width: 80%;
     }
 
-.claim-modal .close-button {
-  cursor: pointer;
-  background: #eee;
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-  float: right;
-  margin-top: -15px; /* Adjust this value to raise or lower the button */
+    .claim-modal .close-button {
+      cursor: pointer;
+      background: #eee;
+      border: none;
+      padding: 5px;
+      border-radius: 5px;
+      float: right;
+      margin-top: -15px;
     }
 
-    /* Reduced font size for the modal heading */
     .claim-modal h2 {
       text-align: center;
       margin: 15px 0;
-      font-size: 1.4rem; /* Adjusted from the default size */
+      font-size: 1.4rem;
     }
 
     .claim-options div {
@@ -128,10 +133,10 @@
       margin-bottom: 20px;
     }
 
- .claim-options img {
-  width: 150px; /* Increase the width */
-  display: block;
-  margin: 0 auto;
+    .claim-options img {
+      width: 150px;
+      display: block;
+      margin: 0 auto;
     }
 
     .claim-options p {
@@ -170,7 +175,6 @@
       100% { transform: scale(1.05); }
     }
 
-    /* Divider styles */
     .divider {
       width: 80%;
       height: 2px;
@@ -180,7 +184,6 @@
   </style>
 </head>
 <body>
-  <!-- Header Section -->
   <div class="header">
     <div class="logo">
       <img src="icon.png" alt="Logo">
@@ -189,76 +192,73 @@
     <button class="button" id="toggleClaimButton">Free shipping</button>
   </div>
 
-<!-- Image Section -->
-<div class="image-container">
-  <img src="iphone_image.jpg" alt="iPhone Giveaway" style="width: 100%; height: auto; max-height: 500px; object-fit: cover;">
-</div>
+  <div class="image-container">
+    <img src="iphone_image.jpg" alt="iPhone Giveaway" style="width: 100%; height: auto; max-height: 500px; object-fit: cover;">
+  </div>
 
-  <!-- Text Section -->
   <div class="text-container">
     <h1>Congratulations</h1>
     <h2>Stand a Chance to Win a Brand New Free iPhone</h2>
     <a href="#" class="claim-button" id="claimNowButton">Claim Now</a>
 
-    <!-- Additional Info Section -->
     <div class="info-container">
       Fast 5G Network Speed with the A15 Bionic Chip on The iPhone 14, and the A16 Bionic Chip on The iPhone 14 Pro and iPhone 14 Pro Max, the Fastest Chip in a Smartphone, Amazing Cameras, Super Retina XDR OLED Display, and the Beautiful Dynamic Island on the 14 Pro and 14 Pro max.
     </div>
 
-    <!-- Claim Modal and Overlay -->
     <div class="overlay" id="overlay"></div>
     <div class="claim-modal" id="claimModal">
       <button class="close-button" id="closeButton">Close</button>
-      <h2>Choose the iPhone you want</h2> <!-- Smaller heading -->
+      <h2>Choose the iPhone you want</h2>
       <div class="divider"></div>
       <div class="claim-options">
         <div>
           <h3>iPhone 14 Plus</h3>
           <img src="iphone_14plus_image.jpg" alt="iPhone 14 Plus">
           <p>Blue, 6.7-inch Display, 256GB Storage</p>
-          <a href="https://uploadmix.net/Winiphone14plusnow">Claim iPhone</a>
-          <div class="divider"></div> <!-- Divider below iPhone 14 Plus -->
+          <a href="#">Claim iPhone</a>
+          <div class="divider"></div>
         </div>
         <div>
           <h3>iPhone 14 Pro</h3>
           <img src="iphone_14pro_image.jpg" alt="iPhone 14 Pro">
           <p>Deep Purple, 6.7-inch Display, 256GB Storage</p>
-          <a href="https://trkfiles.com/Winiphone14pronow">Claim iPhone</a>
-          <div class="divider"></div> <!-- Divider below iPhone 14 Pro -->
+          <a href="#">Claim iPhone</a>
+          <div class="divider"></div>
         </div>
         <div>
           <h3>iPhone 14 Pro Max</h3>
           <img src="iphone_14promax_image.jpg" alt="iPhone 14 Pro Max">
           <p>Space Black, 6.7-inch Display, 512GB Storage</p>
-          <a href="https://passingfiles.com/Winiphone14promaxnow">Claim iPhone</a>
+          <a href="#">Claim iPhone</a>
         </div>
       </div>
     </div>
 
-<!-- FAQ Section -->
-<div class="faq-container">
-  <h2>Frequently Asked Questions</h2>
-  <div class="divider"></div> <!-- Divider below FAQ headline -->
+    <div class="faq-container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="divider"></div>
 
-  <div>
-    <p class="faq-question">When will I get my iPhone?</p>
-    <p class="faq-answer">Winners will receive their iPhone within 7-14 business days after successful claiming and participation.</p>
-  </div>
-  
-  <div class="divider"></div> <!-- Divider between questions -->
+      <div>
+        <p class="faq-question">When will I get my iPhone?</p>
+        <p class="faq-answer">Winners will receive their iPhone within 7-14 business days after successful claiming and participation.</p>
+      </div>
+      
+      <div class="divider"></div>
 
-  <div>
-    <p class="faq-question">Do I have to pay for shipping?</p>
-    <p class="faq-answer">No, shipping is free worldwide.</p>
-  </div>
-  
-  <div class="divider"></div> <!-- Divider between questions -->
+      <div>
+        <p class="faq-question">Do I have to pay for shipping?</p>
+        <p class="faq-answer">No, shipping is free worldwide.</p>
+      </div>
 
-  <div>
-    <p class="faq-question">Why do I have to complete an offer or verify to successfully claim an iPhone?</p>
-    <p class="faq-answer">This is for various security and safety reasons. first; to prevent robot and malicious activities and verify that our participants are humas, not robot. Secondly; to to create a  unique profile for each of our winners, so that winners can be easily selected and notified.</p>
+      <div class="divider"></div>
+
+      <div>
+        <p class="faq-question">Why do I have to complete an offer or verify to successfully claim an iPhone?</p>
+        <p class="faq-answer">This is to prevent bots and malicious activities and verify that participants are humans, not robots.</p>
+      </div>
+    </div>
   </div>
-</div>
+
   <script>
     document.getElementById('claimNowButton').addEventListener('click', function() {
       document.getElementById('claimModal').style.display = 'block';
@@ -273,10 +273,18 @@
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
       question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+          const answer = question.nextElementSibling;
+          answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
       });
-    });
+
+      document.getElementById('toggleClaimButton').addEventListener('click', function() {
+        const modal = document.getElementById('claimModal');
+        const overlay = document.getElementById('overlay');
+        const isVisible = modal.style.display === 'block';
+        modal.style.display = isVisible ? 'none' : 'block';
+        overlay.style.display = isVisible ? 'none' : 'block';
+      });
   </script>
 </body>
 </html>
