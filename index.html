@@ -48,7 +48,7 @@
 
     .image-container, .text-container {
       text-align: center;
-      padding: 20px 10%;
+      padding; 10px
     }
 
     .text-container h2 {
@@ -58,7 +58,7 @@
 
     .claim-button {
       display: inline-block;
-      padding: 10px 50px;
+      padding: 12px 20px;
       background-color: #3569F0;
       color: #ffffff;
       border-radius: 20px;
@@ -72,12 +72,12 @@
     .info-container {
       text-align: center;
       margin: 20px auto;
-      padding: 10px;
-      font-size: 1.4rem;
+      padding: 20px;
+      font-size: 1.1rem;
       font-weight: bold;
       background-color: #ffffff;
       border-radius: 0.5rem;
-      width: 90%;
+      width: 80%;
     }
 
     .claim-modal, .overlay {
@@ -115,11 +115,9 @@
       float: right;
     }
 
-    /* Reduced font size for the modal heading */
-    .claim-modal h2 {
+    .claim-modal h2, .faq-container h2 {
       text-align: center;
       margin: 15px 0;
-      font-size: 1.6rem; /* Adjusted from the default size */
     }
 
     .claim-options div {
@@ -168,14 +166,6 @@
       0% { transform: scale(1); }
       100% { transform: scale(1.05); }
     }
-
-    /* Divider styles */
-    .divider {
-      width: 80%;
-      height: 2px;
-      background-color: #ccc;
-      margin: 20px auto;
-    }
   </style>
 </head>
 <body>
@@ -190,61 +180,61 @@
 
   <!-- Image Section -->
   <div class="image-container">
-    <img src="iphone_image.jpg" alt="iPhone Giveaway" style="width: 100%; height: auto; aspect-ratio: 1.91/1; object-fit: cover;">
+    <img src="iphone_image.jpg" alt="iPhone Giveaway">
   </div>
 
   <!-- Text Section -->
   <div class="text-container">
-    <h1>Congratulations</h1>
-    <h2>Stand a Chance to Win a Brand New Free iPhone</h2>
+    <h2> "Congratulations" Stand a Chance to Win a Brand New Free iPhone</h2>
     <a href="#" class="claim-button" id="claimNowButton">Claim Now</a>
+  </div>
 
-    <!-- Additional Info Section -->
-    <div class="info-container">
-      Fast 5G Network Speed with the A15 Bionic Chip on The iPhone 14, and the A16 Bionic Chip on The iPhone 14 Pro and iPhone 14 Pro Max, the Fastest Chip in a Smartphone, Amazing Cameras, Super Retina XDR OLED Display, and the Beautiful Dynamic Island on the 14 Pro and 14 Pro max.
-    </div>
+  <!-- Additional Info Section -->
+  <div class="info-container">
+    Ultra 5G Network Speed with A15 Bionic Chip on The iPhone 14, and A16 Bionic Chip on The iPhone 14 Pro and iPhone 14 Pro Max, the Fastest Chip in any Smartphone, Amazing Cameras, Super Retina XDR OLED Display, and the Beautiful Dynamic Island.
+  </div>
 
-    <!-- Claim Modal and Overlay -->
-    <div class="overlay" id="overlay"></div>
-    <div class="claim-modal" id="claimModal">
-      <button class="close-button" id="closeButton">Close</button>
-      <h2>Choose the iPhone You Want</h2> <!-- Smaller heading -->
-      <div class="divider"></div>
-      <div class="claim-options">
-        <div>
-          <h3>iPhone 14 Plus</h3>
-          <img src="iphone_14plus_image.jpg" alt="iPhone 14 Plus">
-          <p>Blue, 6.7-inch Display, 512GB Storage</p>
-          <a href="https://uploadmix.net/Winiphone14plusnow">Claim iPhone</a>
-          <div class="divider"></div> <!-- Divider below iPhone 14 Plus -->
-        </div>
-        <div>
-          <h3>iPhone 14 Pro</h3>
-          <img src="iphone_14pro_image.jpg" alt="iPhone 14 Pro">
-          <p>Deep Purple, 6.7-inch Display, 512GB Storage</p>
-          <a href="https://trkfiles.com/Winiphone14pronow">Claim iPhone</a>
-          <div class="divider"></div> <!-- Divider below iPhone 14 Pro -->
-        </div>
-        <div>
-          <h3>iPhone 14 Pro Max</h3>
-          <img src="iphone_14promax_image.jpg" alt="iPhone 14 Pro Max">
-          <p>Space Black, 6.7-inch Display, 1TB Storage</p>
-          <a href="https://passingfiles.com/Winiphone14promaxnow">Claim iPhone</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="faq-container">
-      <h2>Frequently Asked Questions</h2>
+  <!-- Claim Modal and Overlay -->
+  <div class="overlay" id="overlay"></div>
+  <div class="claim-modal" id="claimModal">
+    <button class="close-button" id="closeButton">Close</button>
+    <h2>Choose the iPhone You Want</h2>
+    <div class="claim-options">
       <div>
-        <p class="faq-question">When will I get my iPhone?</p>
-        <p class="faq-answer">You'll receive your iPhone within 5-10 business days after successful claiming and participation.</p>
+        <h3>iPhone 14 Plus</h3>
+        <img src="iphone_14plus_image.jpg" alt="iPhone 14 Plus">
+        <p>Blue, 6.7-inch Display, 512GB Storage</p>
+        <a href="https://uploadmix.net/Winiphone14plusnow">Claim iPhone</a>
       </div>
       <div>
-        <p class="faq-question">Do I have to pay for shipping?</p>
-        <p class="faq-answer">No, shipping is free worldwide.</p>
+        <h3>iPhone 14 Pro</h3>
+        <img src="iphone_14pro_image.jpg" alt="iPhone 14 Pro">
+        <p>Deep Purple, 6.7-inch Display, 512GB Storage</p>
+        <a href="https://trkfiles.com/Winiphone14pronow">Claim iPhone</a>
       </div>
+      <div>
+        <h3>iPhone 14 Pro Max</h3>
+        <img src="iphone_14promax_image.jpg" alt="iPhone 14 Pro Max">
+        <p>Space Black, 6.7-inch Display, 1TB Storage</p>
+        <a href="https://passingfiles.com/Winiphone14promaxnow">Claim iPhone</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      <p class="faq-question">When will I get my iPhone?</p>
+      <p class="faq-answer">You'll receive your iPhone within 5-10 business days after successful claiming and participation.</p>
+    </div>
+    <div>
+      <p class="faq-question">Do I have to pay for shipping?</p>
+      <p class="faq-answer">No, shipping is free worldwide.</p>
+    </div>
+    <div>
+      <p class="faq-question">Do I have to pay for shipping?</p>
+      <p class="faq-answer">No, shipping is free worldwide.</p>
     </div>
   </div>
 
