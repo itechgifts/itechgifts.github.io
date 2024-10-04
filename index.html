@@ -48,7 +48,7 @@
 
     .image-container, .text-container {
       text-align: center;
-      padding; 10px
+      padding: 20px 10%;
     }
 
     .text-container h2 {
@@ -58,26 +58,27 @@
 
     .claim-button {
       display: inline-block;
-      padding: 12px 20px;
+      padding: 10px 50px;
       background-color: #3569F0;
       color: #ffffff;
       border-radius: 20px;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 2.0rem;
       font-weight: bold;
       margin: 20px 0;
       animation: zoomInOut 1s infinite alternate;
     }
 
-    .info-container {
-      text-align: center;
-      margin: 20px auto;
-      padding: 20px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      background-color: #ffffff;
-      border-radius: 0.5rem;
-      width: 80%;
+.info-container {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  width: 80%; /* Change width to 100% */
+  max-width: 800px; /* Optional: Add a max-width for better layout on large screens */
     }
 
     .claim-modal, .overlay {
@@ -106,18 +107,21 @@
       width: 80%;
     }
 
-    .claim-modal .close-button {
-      cursor: pointer;
-      background: #eee;
-      border: none;
-      padding: 5px;
-      border-radius: 5px;
-      float: right;
+.claim-modal .close-button {
+  cursor: pointer;
+  background: #eee;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  float: right;
+  margin-top: -15px; /* Adjust this value to raise or lower the button */
     }
 
-    .claim-modal h2, .faq-container h2 {
+    /* Reduced font size for the modal heading */
+    .claim-modal h2 {
       text-align: center;
       margin: 15px 0;
+      font-size: 1.4rem; /* Adjusted from the default size */
     }
 
     .claim-options div {
@@ -125,10 +129,10 @@
       margin-bottom: 20px;
     }
 
-    .claim-options img {
-      width: 100px;
-      display: block;
-      margin: 0 auto;
+ .claim-options img {
+  width: 150px; /* Increase the width */
+  display: block;
+  margin: 0 auto;
     }
 
     .claim-options p {
@@ -150,7 +154,7 @@
     }
 
     .faq-question {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: bold;
       cursor: pointer;
       margin-bottom: 5px;
@@ -166,6 +170,14 @@
       0% { transform: scale(1); }
       100% { transform: scale(1.05); }
     }
+
+    /* Divider styles */
+    .divider {
+      width: 80%;
+      height: 2px;
+      background-color: #ccc;
+      margin: 20px auto;
+    }
   </style>
 </head>
 <body>
@@ -178,66 +190,76 @@
     <button class="button" id="toggleClaimButton">Free shipping</button>
   </div>
 
-  <!-- Image Section -->
-  <div class="image-container">
-    <img src="iphone_image.jpg" alt="iPhone Giveaway">
-  </div>
+<!-- Image Section -->
+<div class="image-container">
+  <img src="iphone_image.jpg" alt="iPhone Giveaway" style="width: 100%; height: auto; max-height: 500px; object-fit: cover;">
+</div>
 
   <!-- Text Section -->
   <div class="text-container">
-    <h2> "Congratulations" Stand a Chance to Win a Brand New Free iPhone</h2>
+    <h1>Congratulations</h1>
+    <h2>Stand a Chance to Win a Brand New Free iPhone</h2>
     <a href="#" class="claim-button" id="claimNowButton">Claim Now</a>
-  </div>
 
-  <!-- Additional Info Section -->
-  <div class="info-container">
-    Ultra 5G Network Speed with A15 Bionic Chip on The iPhone 14, and A16 Bionic Chip on The iPhone 14 Pro and iPhone 14 Pro Max, the Fastest Chip in any Smartphone, Amazing Cameras, Super Retina XDR OLED Display, and the Beautiful Dynamic Island.
-  </div>
+    <!-- Additional Info Section -->
+    <div class="info-container">
+      Fast 5G Network Speed with the A15 Bionic Chip on The iPhone 14, and the A16 Bionic Chip on The iPhone 14 Pro and iPhone 14 Pro Max, the Fastest Chip in a Smartphone, Amazing Cameras, Super Retina XDR OLED Display, and the Beautiful Dynamic Island on the 14 Pro and 14 Pro max.
+    </div>
 
-  <!-- Claim Modal and Overlay -->
-  <div class="overlay" id="overlay"></div>
-  <div class="claim-modal" id="claimModal">
-    <button class="close-button" id="closeButton">Close</button>
-    <h2>Choose the iPhone You Want</h2>
-    <div class="claim-options">
-      <div>
-        <h3>iPhone 14 Plus</h3>
-        <img src="iphone_14plus_image.jpg" alt="iPhone 14 Plus">
-        <p>Blue, 6.7-inch Display, 512GB Storage</p>
-        <a href="https://uploadmix.net/Winiphone14plusnow">Claim iPhone</a>
+    <!-- Claim Modal and Overlay -->
+    <div class="overlay" id="overlay"></div>
+    <div class="claim-modal" id="claimModal">
+      <button class="close-button" id="closeButton">Close</button>
+      <h2>Choose the iPhone you want</h2> <!-- Smaller heading -->
+      <div class="divider"></div>
+      <div class="claim-options">
+        <div>
+          <h3>iPhone 14 Plus</h3>
+          <img src="iphone_14plus_image.jpg" alt="iPhone 14 Plus">
+          <p>Blue, 6.7-inch Display, 256GB Storage</p>
+          <a href="https://uploadmix.net/Winiphone14plusnow">Claim iPhone</a>
+          <div class="divider"></div> <!-- Divider below iPhone 14 Plus -->
+        </div>
+        <div>
+          <h3>iPhone 14 Pro</h3>
+          <img src="iphone_14pro_image.jpg" alt="iPhone 14 Pro">
+          <p>Deep Purple, 6.7-inch Display, 256GB Storage</p>
+          <a href="https://trkfiles.com/Winiphone14pronow">Claim iPhone</a>
+          <div class="divider"></div> <!-- Divider below iPhone 14 Pro -->
+        </div>
+        <div>
+          <h3>iPhone 14 Pro Max</h3>
+          <img src="iphone_14promax_image.jpg" alt="iPhone 14 Pro Max">
+          <p>Space Black, 6.7-inch Display, 512GB Storage</p>
+          <a href="https://passingfiles.com/Winiphone14promaxnow">Claim iPhone</a>
+        </div>
       </div>
-      <div>
-        <h3>iPhone 14 Pro</h3>
-        <img src="iphone_14pro_image.jpg" alt="iPhone 14 Pro">
-        <p>Deep Purple, 6.7-inch Display, 512GB Storage</p>
-        <a href="https://trkfiles.com/Winiphone14pronow">Claim iPhone</a>
-      </div>
-      <div>
-        <h3>iPhone 14 Pro Max</h3>
-        <img src="iphone_14promax_image.jpg" alt="iPhone 14 Pro Max">
-        <p>Space Black, 6.7-inch Display, 1TB Storage</p>
-        <a href="https://passingfiles.com/Winiphone14promaxnow">Claim iPhone</a>
-      </div>
     </div>
-  </div>
 
-  <!-- FAQ Section -->
-  <div class="faq-container">
-    <h2>Frequently Asked Questions</h2>
-    <div>
-      <p class="faq-question">When will I get my iPhone?</p>
-      <p class="faq-answer">You'll receive your iPhone within 5-10 business days after successful claiming and participation.</p>
-    </div>
-    <div>
-      <p class="faq-question">Do I have to pay for shipping?</p>
-      <p class="faq-answer">No, shipping is free worldwide.</p>
-    </div>
-    <div>
-      <p class="faq-question">Do I have to pay for shipping?</p>
-      <p class="faq-answer">No, shipping is free worldwide.</p>
-    </div>
-  </div>
+<!-- FAQ Section -->
+<div class="faq-container">
+  <h2>Frequently Asked Questions</h2>
+  <div class="divider"></div> <!-- Divider below FAQ headline -->
 
+  <div>
+    <p class="faq-question">When will I get my iPhone?</p>
+    <p class="faq-answer">Winners will receive their iPhone within 7-14 business days after successful claiming and participation.</p>
+  </div>
+  
+  <div class="divider"></div> <!-- Divider between questions -->
+
+  <div>
+    <p class="faq-question">Do I have to pay for shipping?</p>
+    <p class="faq-answer">No, shipping is free worldwide.</p>
+  </div>
+  
+  <div class="divider"></div> <!-- Divider between questions -->
+
+  <div>
+    <p class="faq-question">Why do I have to complete an offer or verify to successfully claim an iPhone?</p>
+    <p class="faq-answer">This is for various security and safety reasons. first; to prevent robot and malicious activities and verify that our participants are humas, not robot. Secondly; to to create a  unique profile for each of our winners, so that winners can be easily selected and notified.</p>
+  </div>
+</div>
   <script>
     document.getElementById('claimNowButton').addEventListener('click', function() {
       document.getElementById('claimModal').style.display = 'block';
